@@ -1,5 +1,5 @@
-* {
-    border: solid black 1px ;
+*   {
+    /* border: solid black 1px ; */
 }
 
 .col-1 { width: 8.33% ; }
@@ -15,87 +15,149 @@
 .col-11 { width: 91.66% ; }
 .col-12 { width: 100% ; }
 
-@media  ( min-width: 768px )    {   /* Clases que se definen cuando ocurre algo */
-    .col-1 { width: 8.33% ; }
-    .col-2 { width: 16.66% ; }
-    .col-3 { width: 25% ; }
-    .col-4 { width: 33.33% ; }
-    .col-5 { width: 41.66% ; }
-    .col-6 { width: 50% ; }
-    .col-7 { width: 58.33% }
-    .col-8 { width: 66.66% ; }
-    .col-9 { width: 75% ; }
-    .col-10 { width: 83.33% ; }
-    .col-11 { width: 91.66% ; }
-    .col-12 { width: 100% ; }
+
+
+.box_principal  {
+    display: flex ;
+    flex-direction: row ;
+    margin-top: 70px ;
 }
 
-[class*="col-"] {
-    float: left ;
+.menu   {
+    position: fixed ;
+    top: 10px ;
+    width: 98.7% ;
+    display: flex ;
+    flex-flow: row wrap ;
+    border: black solid 1px ;
+    background-color: white ;
 }
 
-.row::after {
-    content: "" ;
-    clear: both ;
-    display: table ;
-}
-
-.text-center    {
+.menu > div {
+    box-sizing: border-box ;
+    padding: 10px ;
     text-align: center ;
-}
-
-.h-600  {
-    height: 900px ;
-}
-
-.padding-5  {
-    padding: 5px ;
-}
-
-.fill-parent {
-    position: relative ;
-    width: 100% ;
-    height: 100% ;
-}
-
-.box_izquierda {
-    display: flex ;
-    flex-flow: column ;
-    padding: 5px ;
-}
-
-#box_foto_perfil    {
-    display: flex ;
-}
-
-.box_contacto   {
-    display: flex ;
-    flex-flow: column ;
-    padding: 5px ; 
-}
-
-.box .row.content    {
     flex: 1 1 auto ;
+    min-width: 200px ;
+}
+
+.menu > div:hover  {
+    background-color: black ;
+    color: white ;
+}
+
+@media (max-width: 768px) {
+    [class*="box_principal"] {
+      flex-direction: column ;
+    }
+    [class*="col-"] {
+        width: 100% ;
+      }
+  }
+
+.padding_10  {
+    padding: 10px ;
 }
 
 #foto_perfil    {
-    max-width: 100% ;
-    height: 100% ;
-    border: none ;
+    box-sizing: border-box ;
+    width: 100% ;
 }
 
-#contacto   {
-    height: 150px ;
+.iconos {
+    width: 30px ;
+    height: 30px ;
+    box-sizing: border-box ;
+    margin: auto ;
 }
 
-#experiencia    {
-    height: 400px ;
-}
-
-.justify_left > div {
+.texto_izquierda    {
     text-align: left ;
 }
 
-#texto_foto {
-    position: relative ;
+.text_center    {
+    text-align: center ;
 }
+
+.cascada_filas div  {
+    display: flex ;
+    flex-direction: row ;
+}
+
+.filas  {
+    display: flex ;
+    flex-direction: row ;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: larger ;
+    color: grey ;
+}
+
+.cascada_filas > div    {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: large ;
+    color: grey ;
+}
+
+.bottom_div {
+    border-bottom: grey solid 1px ;
+}
+
+#panel_izquierdo    {
+    margin-right: 10px ;
+}
+
+#texto_perfil   {
+    position: relative ;
+    top: 30px ;
+}
+
+.barras_nivel   {
+    border-radius: 2em ;
+    height: 20px ;
+    background-color: grey ;
+}
+
+.barras_nivel div   {
+    background-color: cadetblue  ;
+    height: 100% ;
+    box-sizing: border-box ;
+    border-radius: 2em ;
+    color: white ;
+}
+
+.text_grey  {
+    color:grey ;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.titulos    {
+    font-size: xx-large ;
+}
+
+.titulo_grande  {
+    font-size: xx-large ;
+}
+
+#panel_derecho > div {
+    margin-left: 10px ;
+    border: solid grey 1px ;
+    margin-bottom: 10px ;
+}
+
+#panel_izquierdo    {
+    border: solid grey 2px ;
+    padding: 5px ;
+}
+
+.titulos_segmento   {
+    margin-left: 10% ;
+}
+
+#titulos_segmentos  {
+    margin-left: 0% ;
+}
+
+.elementos_panel_derecho > div  {
+    margin-left: 0% ;
+}
+
